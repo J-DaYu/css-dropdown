@@ -1,0 +1,62 @@
+.dropdown{
+  position: relative;
+  display: inline-block;
+  width: 175px;
+  height: 40px;
+  padding: 5px 10px;
+  line-height: 40px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #ccc;
+}
+/* 三角 */
+.dropdown:before, .dropdown li:before{
+  display: inline-block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+/* 菜单 */
+.dropdown ul{
+  list-style: none;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  z-index: 9;
+  position: absolute;
+  top: 100%;
+}
+/* 第一级菜单 */
+.dropdown > ul{
+  left:0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.dropdown:hover > ul{
+  display: block;
+}
+/* 所有菜单项 */
+.dropdown li{
+  position: relative;
+  color: #000;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+}
+.dropdown ul li:hover{
+  background-color: #e3e3e3;
+}
+.dropdown ul li ul{
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #e3e3e3;
+}
+.dropdown ul li:hover > ul{
+  display: block;
+}
